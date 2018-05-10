@@ -1,21 +1,20 @@
 Ext.define('evoca.view.Map', {
     extend: 'Ext.Panel',
-    extend: 'Ext.dataview.List',
+    extend: 'Ext.List',    
     xtype: 'map',
+    
     config: {
         title : 'Map',
         iconCls: 'maps',
-        items: [
-            {
-            xtype: 'titlebar',
-            title: 'Map',
-            docked: 'top',            
-            },
-            {
+        layout: 'fit',
+        items: [            
+            {            
             xtype: 'list',
             store: 'Mapstore',
-            itemTpl: '{Address}, {Description}, {Name}',            
+            itemTpl: '<h1><b>{Address:ellipsis(35)}</b></h1>, {Description}, {Name}, {Latitude}',            
+            itemCls: 'post-entry'
             },
         ],     
     },
 })
+

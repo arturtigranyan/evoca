@@ -10,16 +10,19 @@
     will need to resolve manually.
 */
 
-Ext.Loader.setPath({
-    // 'Ext': '../../src',
-    'Ext.plugin': 'lib/plugin'
-});
+// Ext.Loader.setPath({
+//     // 'Ext': '../../src',
+//     'Ext.plugin': 'lib/plugin'
+// });
 
 Ext.application({
     name: 'evoca',
 
     requires: [
         'Ext.MessageBox'
+    ],
+    controllers: [
+        'Maps'
     ],
     models: [
         'Exchangemodel', 'Mapmodel'
@@ -29,7 +32,7 @@ Ext.application({
     ],
 
     views: [
-        'Main', 'Home', 'Exchange', 'Map'
+        'Main', 'Home', 'MapContainer', 'Exchange', 'Map', 'Details'
     ],
 
     icon: {
@@ -50,15 +53,15 @@ Ext.application({
         '1496x2048': 'resources/startup/1496x2048.png'
     },
     
-    requires: [
-        'Ext.Map',
-        'Ext.Button',
-        'Ext.SegmentedButton',
-        'Ext.Panel',
-        'Ext.Toolbar',
-        'Ext.plugin.google.Traffic',
-        'Ext.plugin.google.Tracker'
-    ],
+    // requires: [
+    //     'Ext.Map',
+    //     'Ext.Button',
+    //     'Ext.SegmentedButton',
+    //     'Ext.Panel',
+    //     'Ext.Toolbar',
+    //     'Ext.plugin.google.Traffic',
+    //     'Ext.plugin.google.Tracker'
+    // ],
 
 
     launch: function() {

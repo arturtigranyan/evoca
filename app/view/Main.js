@@ -14,8 +14,9 @@ Ext.define('evoca.view.Main', {
                 xtype: 'exchange'
             },
             {
-                xtype: 'map'
+                xtype: 'mapContainer'
             }
+            
         ]
     }
 });
