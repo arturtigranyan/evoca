@@ -1,11 +1,12 @@
 Ext.define('evoca.view.MapContainer', {
     extend: 'Ext.NavigationView',
-    xtype: 'mapContainer',
+    xtype: 'MapContainer',
+    
     config: {
         title: 'Maps',
-        iconCls: 'maps',
+        iconCls: 'maps',        
         items: [{
-            xtype: 'map'
+            xtype: 'Map'
         }]
-    }
+    },
 })

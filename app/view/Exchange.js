@@ -5,7 +5,7 @@ Ext.define('evoca.view.Exchange', {
 
     config: {
         title : 'Exchange',
-        iconCls: 'maps',
+        iconCls: 'action',
         items: [
         {
             xtype: 'titlebar',           

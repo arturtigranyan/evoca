@@ -6,5 +6,6 @@ Ext.define('evoca.view.Details', {
         scrollable: true,
         styleHtmlContent: true,
         styleHtmlCls: 'Details',
+        tpl: '{Address}, {Description}'
     }
 })

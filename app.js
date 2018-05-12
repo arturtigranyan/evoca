@@ -22,7 +22,7 @@ Ext.application({
         'Ext.MessageBox'
     ],
     controllers: [
-        'Maps'
+        'Maps', 'Details'
     ],
     models: [
         'Exchangemodel', 'Mapmodel'
@@ -32,7 +32,7 @@ Ext.application({
     ],
 
     views: [
-        'Main', 'Home', 'MapContainer', 'Exchange', 'Map', 'Details'
+        'Main', 'Home', 'MapContainer', 'Exchange', 'Map', 'Details', 'Content'
     ],
 
     icon: {
@@ -53,15 +53,6 @@ Ext.application({
         '1496x2048': 'resources/startup/1496x2048.png'
     },
     
-    // requires: [
-    //     'Ext.Map',
-    //     'Ext.Button',
-    //     'Ext.SegmentedButton',
-    //     'Ext.Panel',
-    //     'Ext.Toolbar',
-    //     'Ext.plugin.google.Traffic',
-    //     'Ext.plugin.google.Tracker'
-    // ],
 
 
     launch: function() {

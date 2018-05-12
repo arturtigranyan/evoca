@@ -3,20 +3,17 @@ Ext.define('evoca.controller.Maps', {
 
     config: {
         refs: {
-
+            MapContainer:'MapContainer'
         },
         control: {
-            'mapContainer map list': {
-                itemtap: function(){
-                    console.log("Item taped");
-                }
+            'MapContainer Map list':{
+                itemtap: function(list, index, targed, record){
+                    // console.log("Item taped")
+                    var detailsView = Ext.create('evoca.view.Details');
+					detailsView.setData(record.data);
+					this.getMapContainer().push(detailsView);
+				}
             }
-
         }
     },
-
-    //called when the Application is launched, remove if not needed
-    // launch: function(app) {
-
-    // }
 });
