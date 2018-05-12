@@ -5,6 +5,6 @@ Ext.define('evoca.model.Mapmodel', {
         title: 'title'
     },
     config: {    
-        fields: ['Address', 'Description']
+        fields: ['Id', 'Type', 'Address', 'Description', 'Latitude', 'Longitude', 'Name']
     }
 })
