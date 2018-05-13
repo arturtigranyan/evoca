@@ -3,7 +3,11 @@ Ext.define('evoca.store.Mapstore', {
     config: {
         model: 'evoca.model.Mapmodel',
         autoLoad: true,
-        
+
+        sorters: 'Address',
+        grouper : function(record) {
+            return record.get('Address')[0];
+        },        
         proxy: {
             type: 'ajax',            
             url: 'https://online.evocabank.am/internetbank/api/mappoints',   
@@ -13,23 +17,5 @@ Ext.define('evoca.store.Mapstore', {
                 rootProperty: 'items'
             }
         }
-
-        // data: [
-        //     {
-        //     Address: "Qochar",
-        //     Description: "Somehow",
-        //     Name: "Yerevan"
-        //     },
-        //     {
-        //         Address: "Kentron",
-        //         Description: "Somehow1",
-        //         Name: "Yerevan"
-        //     },
-        //     {
-        //         Address: "Komitas",
-        //         Description: "Somehow2",
-        //         Name: "Yerevan"
-        //     }
-        // ],
     }
 })

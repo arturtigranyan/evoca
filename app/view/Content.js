@@ -1,46 +1,64 @@
 Ext.define('evoca.view.Content', {
-    extend: 'Ext.Panel',
-    // extend: 'Ext.dataview.List',
-    // extend: 'Ext.grid.Panel',
+    extend: 'Ext.Panel',    
     xtype: 'Content',
-
+    fullscreen: true,
 
     config: {
-        title : 'Contact',
-        iconCls: 'action',  
-        layout: 'fit', 
-        html: '<div id="content"></div>',
-        // width: '700px',
-        items: [
+        title : 'Հետադարձ կապ',
+        iconCls: 'compose',
+        xtype: 'frompanel',  
+        // layout: 'fit', 
+        // html: '<div id="content"></div>',   
+       
+        items:[
         {
-            xtype: 'titlebar',           
-            title: 'Map',
-            docked: 'top'
-            
-        },        
-        // {
-        //     html: '<p>Map</p>',
-        //     xtype: 'button',
-        //     id: 'clickButton',
-        //     width: '120px',
-        //     height: '20px',
-        //     // handler: 'onClickLoadData',
-        //     listeners: {
-        //         tap: function(button, e, eOpts){
-        //             // console.log('Button clicked');
-        //         }
-        //     }
-        // },
-        // {            
-        //     xtype: 'list',
-        //     store: 'Mapstore',           
-        //     itemTpl: '<h1><b>{Address:ellipsis(35)}</b></h1>, {Description}',            
-        //     itemCls: 'post-entry'
-        //     },        
-        // {          
-        //     id: 'map',                 
-            
-        // }
-        ]           
+            html: ['<p>Հասցե ք. Երևան, 0010, Հանրապետության 44/2 (Գլխամասային գրասենյակ)</p>',
+        '<hr>',
+        '<p>Հեռ., +374 10 60 55 55, 56 20 36, 58 29 77</p>',
+        '<hr>',
+        '<p>e-mail, hello@evocabank.am</p>',
+        ].join(""),
+        },
+        {
+            xtype: 'textfield',
+            name: 'firstname',
+            label: 'First Name'
+        },
+        {
+            xtype: 'textfield',
+            name: 'lastname',
+            label: 'Last name'
+        },
+        {
+            xtype: 'emailfield',
+            label: 'Email',
+            name: 'email',
+            required: true
+        },
+        {
+            xtype: 'passwordfield',
+            label: 'Password',
+            name: 'password',
+            required: true
+        },
+        {
+            xtype: 'textareafield',
+            label: 'Details',
+            maxRows: 3,
+            placeHolder: 'Enter your email content',
+            maxLength: 120,
+            name: 'details'
+        },
+        {
+            xtype: 'button',
+            text: 'Submit',
+            width: '150px',
+            ui: 'action',
+            handler: function(){
+                this.up('formpanel').submit();
+            }
+        }
+        ]
+        
     }
 })

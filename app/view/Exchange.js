@@ -4,14 +4,9 @@ Ext.define('evoca.view.Exchange', {
     xtype: 'exchange',
 
     config: {
-        title : 'Exchange',
+        title : 'Փոխարժեք',
         iconCls: 'action',
-        items: [
-        {
-            xtype: 'titlebar',           
-            title: 'Exchange',
-            docked: 'top'
-        },
+        items: [       
         {
             xtype: 'list',
             store: 'Exchangestore',

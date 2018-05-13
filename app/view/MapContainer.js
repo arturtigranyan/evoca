@@ -3,7 +3,7 @@ Ext.define('evoca.view.MapContainer', {
     xtype: 'MapContainer',
     
     config: {
-        title: 'Maps',
+        title: 'Քարտեզ',
         iconCls: 'maps',        
         items: [{
             xtype: 'Map'
