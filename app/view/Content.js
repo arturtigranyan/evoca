@@ -1,43 +1,46 @@
 Ext.define('evoca.view.Content', {
     extend: 'Ext.Panel',
     // extend: 'Ext.dataview.List',
-    xtype: 'Content', 
-    // layout: 'fit',   
+    // extend: 'Ext.grid.Panel',
+    xtype: 'Content',
+
 
     config: {
-        title : 'Content',
+        title : 'Contact',
         iconCls: 'action',  
-        
+        layout: 'fit', 
         html: '<div id="content"></div>',
+        // width: '700px',
         items: [
         {
             xtype: 'titlebar',           
-            title: 'Content',
+            title: 'Map',
             docked: 'top'
             
         },        
-        {
-            html: '<p>HIII</p>',
-            xtype: 'button',
-            id: 'myButton',
-            width: '120px',
-            height: '20px',
-            handler: 'onClickLoadData',
+        // {
+        //     html: '<p>Map</p>',
+        //     xtype: 'button',
+        //     id: 'clickButton',
+        //     width: '120px',
+        //     height: '20px',
+        //     // handler: 'onClickLoadData',
+        //     listeners: {
+        //         tap: function(button, e, eOpts){
+        //             // console.log('Button clicked');
+        //         }
+        //     }
+        // },
+        // {            
+        //     xtype: 'list',
+        //     store: 'Mapstore',           
+        //     itemTpl: '<h1><b>{Address:ellipsis(35)}</b></h1>, {Description}',            
+        //     itemCls: 'post-entry'
+        //     },        
+        // {          
+        //     id: 'map',                 
             
-            // listeners: {
-            //     tap: function(button, e, eOpts){
-            //         console.log('Button clicked');
-            //     }
-            // }
-        },
-        {
-            // html: '<p>MAP</p>',
-            // xtype: 'map',     
-            // useCurrentLocation: true,            
-            // width: '700px',
-            // height: '400px',  
-                  
-        }
+        // }
         ]           
     }
 })

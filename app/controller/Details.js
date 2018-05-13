@@ -3,56 +3,50 @@ Ext.define('evoca.controller.Details', {
 
     config: {
         refs: {
-            theButton: '#myButton'
+            theButton: '#clickButton',
+            markerEvent: '#marker'
         },
         control: {
             theButton: {
                 tap: 'handleButtonClick'
-            }
+            }            
         }
     },
+   
+
     handleButtonClick: function(current, record){
-        console.log("Button clicked!!!!");
-        // var store = Ext.create('evoca.store.Mapstore');
+        console.log("Button clicked!!!!");      
 
-        // var data = store.getData();
-
-        var markers = [];
+        this.markers = {};
         var myStore = Ext.create('evoca.store.Mapstore');
       
         myStore.on('load', function () {
-
-            
-            
-            // var script = document.createElement('script');
-            // script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBKkI2kjwBzPu2UDLQH0fXUZG4uCH6Oe2M';
-            // document.getElementsByTagName('head')[0].appendChild(script);
-
                 map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 2,
-                  center: new google.maps.LatLng(2.8,-187.3),
+                  zoom: 12,
+                  center: new google.maps.LatLng(40.177200, 44.503490),
                   mapTypeId: 'terrain'
                 });
         
                 // Create a <script> tag and set the USGS URL as the source.
                 var script = document.createElement('script');
                 script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-                document.getElementsByTagName('head')[0].appendChild(script);
-               
+                document.getElementsByTagName('head')[0].appendChild(script);               
                 
               window.eqfeed_callback = function(results) {
                 
                 myStore.data.each(function(item,  index, totalItems ) {                   
-                     var lang = parseFloat(item.data['Latitude']);
-                      var latLng = new google.maps.LatLng(lang);
+
+                     var lat = parseFloat(item.data['Latitude']);
+                     var lng = parseFloat(item.data['Longitude']);
                       
+                     var latLng = new google.maps.LatLng(lat, lng);
                       var marker = new google.maps.Marker({
                         position: latLng,
                         map: map
-                      });                       
+                      });                                  
                 });
               }
-        
+              console.log(this.markers)
         });        
 },
 

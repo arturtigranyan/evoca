@@ -6,7 +6,7 @@ Ext.define('evoca.view.Home', {
         title: 'Home',
         iconCls: 'home',
         layout: 'fit',
-        scrollable: true,
+        scrollable: true,        
         styleHtmlContent: true,
         styleHtmlCls: 'home',
         html: ['<h1>Evoca Bank Home Page',
@@ -16,7 +16,7 @@ Ext.define('evoca.view.Home', {
             {
                 xtype: 'titlebar',
                 title: 'Home Page',
-                docked: 'top'
+                docked: 'top'                
             },
             
         ]

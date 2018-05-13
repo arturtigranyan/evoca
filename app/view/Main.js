@@ -4,11 +4,12 @@ Ext.define('evoca.view.Main', {
 
     config: {
         tabBarPosition: 'top',
-        
 
         items: [
+            
             {
                 xtype: 'home'
+                
             },
             {
                 xtype: 'exchange'
