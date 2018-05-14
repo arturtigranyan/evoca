@@ -108,6 +108,6 @@ Ext.define('evoca.controller.Details', {
 },
 
     launch: function(app) {       
-        console.log("AAAA")
+       
     },
 });

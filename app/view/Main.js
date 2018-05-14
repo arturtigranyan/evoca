@@ -3,16 +3,15 @@ Ext.define('evoca.view.Main', {
     xtype: 'main',
 
     config: {
-        // tabBarPosition: 'bottom',
-    
+        tabBarPosition: 'bottom',    
         items: [      
             {
                 xtype: 'toolbar',                
                 docked: 'top',                   
                 items: [{
                     xtype: 'button',
-                    iconCls: 'list',                    
-                    
+                    iconCls: 'list',   
+                    ui: 'plain',                                     
                     handler: function(){
                         if(Ext.Viewport.getMenus().left.isHidden()){
                             Ext.Viewport.showMenu('left');
@@ -43,7 +42,8 @@ Ext.define('evoca.view.Main', {
             // {                
             //     xtype: 'button',
             //     text: 'կապ',
-            //     iconCls: 'user'
+            //     iconCls: 'user',
+            //     cls: 'menu-button'
                 
             // },
             // {

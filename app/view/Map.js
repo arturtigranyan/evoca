@@ -7,7 +7,7 @@ Ext.define('evoca.view.Map', {
     config: {
         title : 'Քարտեզ',        
         iconCls: 'maps', 
-        id: 'contactlist',              
+        id: 'contactlist',                      
         layout: 'fit',        
         items: [ 
             {    
@@ -40,7 +40,8 @@ Ext.define('evoca.view.Map', {
             {          
                 id: 'map',   
                 margin: '10 200 80 250',
-                width: '50%'                
+                width: '50%',   
+                height: '55%'             
             },                   
         ],   
     },
